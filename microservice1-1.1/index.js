@@ -1,9 +1,10 @@
 var restify = require("restify");
 var server = restify.createServer();
+var errors = require("restify-errors");
 
 server.use(restify.plugins.bodyParser());
 server.use(restify.plugins.authorizationParser());
-/*
+
 server.use(function(req, res, next) {
   users = {
     ibm_test_robot_1: { password: "ibm_test_1.123#" },
@@ -14,18 +15,18 @@ server.use(function(req, res, next) {
     users[req.username] &&
     req.authorization.basic.password == users[req.username].password
   ) {
-    console.log("passed");
+    //console.log("passed");
     return next();
   } else {
-    console.log("not passed");
+    //console.log("not passed");
     return next(new errors.NotAuthorizedError());
   }
 });
-*/
-server.post("/ibmchallengemic1/element_sorter", sendV110);
+
+server.post("/ibmchallengemic1/element_sorter1_1", sendV110);
 server.use(function(err, req, res, next) {
-  console.error(err);
-  const error_result = { status: "error", message: err.message };
+  //console.error(err);
+  const error_result = { status: "error", message: JSON.stringify(err) };
   res.send(404, error_result);
 });
 
