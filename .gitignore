@@ -1,6 +1,6 @@
-my-gateway
+api-gateway
 microservice1-1.0/node_modules
 microservice1-1.1/node_modules
 microservice2-1.0/node_modules
 microservice2-1.1/node_modules
-my_gateway
+api_gateway

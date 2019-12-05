@@ -23,7 +23,7 @@ server.use(function(req, res, next) {
   }
 });
 
-server.post("/ibmchallengemic1/element_sorter1_1", sendV110);
+server.post("/element_sorter1_1", sendV110);
 server.use(function(err, req, res, next) {
   //console.error(err);
   const error_result = { status: "error", message: JSON.stringify(err) };

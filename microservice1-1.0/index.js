@@ -30,11 +30,11 @@ server.use(function(err, req, res, next) {
 });
 
 server.get("/testing", function(req, res, next) {
-  res.send({ message: "It is wornking..." });
+  res.send({ message: "It is working..." });
   return next();
 });
 
-server.post("/ibmchallengemic1/element_sorter1_0", sendV100);
+server.post("/element_sorter1_0", sendV100);
 
 function sendV100(req, res, next) {
   var { elements } = req.body;

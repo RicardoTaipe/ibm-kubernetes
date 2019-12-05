@@ -30,12 +30,12 @@ server.use(function(err, req, res, next) {
   res.send(400, error_result);
 });
 
-server.post("/ibmchallengemic2/statistics1_0", statistics);
+server.post("/statistics1_0", statistics);
 
 function statistics(req, res, next) {
   var { elements } = req.body;
   var numbers = elements.filter(element => typeof element === "number");
-  var mode_r=mode(numbers);
+  var mode_r = mode(numbers);
   const success_response = {
     status: "success",
     message: "ok",
