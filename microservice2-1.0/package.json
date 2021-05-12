@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mathjs": "^6.2.3",
+    "mathjs": "^7.5.1",
     "restify": "^8.4.0",
     "restify-errors": "^8.0.1"
   },
